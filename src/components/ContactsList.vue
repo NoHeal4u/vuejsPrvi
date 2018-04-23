@@ -9,7 +9,7 @@
     <th>Email</th>
   </tr>
 
-  <tr  v-for="(user,key) in users" :key="key">
+  <tr  v-for="(user,key) in users" :key="key" v-if = "user.name === 'Pera' ">
       <td>{{user.name}}</td>
       <td>{{user.lastName}}</td>
       <td>{{user.email}}</td>
