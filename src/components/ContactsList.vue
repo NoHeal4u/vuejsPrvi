@@ -24,12 +24,14 @@
     <th>Firstname</th>
     <th>Lastname</th> 
     <th>Email</th>
+    <th>&nbsp;</th>
   </tr>
 
-  <tr  v-for="(user,key) in users" :key="key">
-      <td>{{user.firstName}}</td>
-      <td>{{user.lastName}}</td>
-      <td>{{user.email}}</td>
+  <tr  v-for="(contact,key) in contacts" :key="key">
+      <td>{{contact.firstName}}</td>
+      <td>{{contact.lastName}}</td>
+      <td>{{contact.email}}</td>
+      <td><button @click = "removeContact(contact)">Remove</button></td>
   </tr>
   
 </table>
@@ -51,7 +53,7 @@ export default {
 
     return{
 
-      users: [
+      contacts: [
       { firstName: 'Pera' , lastName: 'Peric' , email: 'peraperic@gmail.com'},
       { firstName: 'Sima' , lastName: 'Simic' , email: 'simasimic@gmail.com'},
       { firstName: 'Laza' , lastName: 'Lazic' , email: 'lazalazic@gmail.com'}
@@ -66,11 +68,21 @@ export default {
 
     }
   },
+
   methods:{
   addContact(){
-  this.users.push(this.newContact)
+  this.contacts.push(this.newContact)
+  },
+
+  removeContact(contact){
+  this.contacts.splice(this.contacts.indexOf(contact),1)
   }
+
+
+
   }
+
+
 }
 
 </script>
