@@ -1,7 +1,7 @@
 <template>
 
   <div>
-  <form @submit.prevent="addContact">
+ <!--  <form @submit.prevent="addContact">
 
   <label>First Name</label>
   <input v-model = "newContact.firstName" type = "text" placeholder = "First Name" />
@@ -16,8 +16,8 @@
   
 
   </form>
-
-  {{newContact}}
+ -->
+  
 
   <table style="width:100%">
   <tr>
