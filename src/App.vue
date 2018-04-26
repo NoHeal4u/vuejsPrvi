@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    
+    <router-view></router-view>
     <!-- <ContactsList/> -->
-    <PropsExample :message = "message"
-    @notify-parent = "handleNotifyParent"
-    />
+   <!--  <PropsExample :message = "message"
+    @notify-parent = "handleNotifyParent" -->
+    <!-- /> -->
     
     
   </div>
@@ -13,14 +13,14 @@
 
 <script>
 
-import ContactsList from './components/ContactsList.vue'
-import PropsExample from './components/PropsExample.vue'
+// import ContactsList from './components/ContactsList.vue'
+// import PropsExample from './components/PropsExample.vue'
 
 export default {
   name: 'app',
   components: {
-    ContactsList,
-    PropsExample
+    // ContactsList,
+    // PropsExample
   },
   data() {
     return {
